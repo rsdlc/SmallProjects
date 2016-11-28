@@ -1,0 +1,27 @@
+<div class="jumbotron" align="center">
+    <h2>Your search query did not return any results. Try looking for another tag or ID.</h2> 
+  </div>
+<div class="col-md-6">
+  <form action="/posts/tags/postwithtags" method="get" id="form3" align="center">
+    Find posts with the tag:<br>
+    <input type="text" name="name"><br><br>
+    <button type="submit" class="btn btn-success">Find post</button><br><br>
+  </form>
+</div>
+<div class="col-md-6">
+  <form action="/posts/findby/" method="get" align="center">
+    Find post with a specific ID:<br>
+    <input type="text" name="id"><br><br>
+    <button type="submit" class="btn btn-success">Find post</button><br><br>
+    
+  </form>
+</div>
+
+
+
+<form action="/" align="center">
+    <button type="submit" formmethod="get"  class="btn btn-primary">Home Page</button>
+    <button type="reset" value="Reset" class="btn btn-danger">Reset</button>
+</form>
+
+

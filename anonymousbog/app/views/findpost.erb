@@ -1,0 +1,18 @@
+<% if @post != nil then %>
+<div class="jumbotron">
+    <h1>Current Posts with the ID '<%= @post.id %>'</h1> 
+  </div>
+<div class = "panel panel-primary">
+     <div class = "panel-heading">
+        <h3 class = "panel-title">Title: <%= @post.title %>  <a href="/posts/edit/<%= @post.id %>"><span class="glyphicon glyphicon-pencil"></span></a>
+      <a href="/posts/delete/<%= @post.id %>"><span class="glyphicon glyphicon-remove" onclick="return confirm('Are you sure you want to delete this post?')"></span></a></h3>
+     </div>
+   
+     <div class = "panel-body">
+        <%= @post.body %>
+     </div>
+  </div>
+<% end  %>
+<div align="center" id="divbotones">
+    <a href="/"><button class="btn btn-primary">Home Page</button></a>
+</div>

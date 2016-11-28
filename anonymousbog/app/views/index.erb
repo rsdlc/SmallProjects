@@ -1,0 +1,30 @@
+<div class="jumbotron">
+    <h1>Anonyblog</h1> 
+</div>
+  <form action="/posts" method="post" id="formpost" align="center">
+    <p id="createpost">Title:<br>
+      <input type="text" name="title" size="51" placeholder="Your title goes here" id="title1" required>
+    </p><br>
+    <p id="createpost">Post:<br>
+      <textarea rows="7" cols="50" name="body" id="post1" placeholder="The body of your post goes here" required></textarea>
+    </p>
+    <br>
+    <label for="post_tags">Tags:</label><br>
+    <input id="post_tags" name="post[tags]" placeholder="tag1, tag2, otro tag, cuarto tag" size="58" required><br><br>
+    <button type="reset" value="Reset" class="btn btn-danger">Clear Fields</button><br><br>
+    <button type="submit" class="btn btn-success">Create Post</button><br><br>
+    <button type="submit" id="showallposts" formaction="/posts" formmethod="get"  class="btn btn-warning">All Posts</button>
+  </form>
+
+  <br><br><form action="/posts/tags/postwithtags" method="get" id="form3" align="center">
+    Find posts with the tag:<br>
+    <input type="text" name="name"><br><br>
+    <button type="submit" class="btn btn-primary">Find post</button><br><br>
+  </form>
+
+  <form action="/posts/findby/" method="get" align="center">
+    Find post with a specific ID:<br>
+    <input type="text" name="id"><br><br>
+    <button type="submit" class="btn btn-primary">Find post</button><br><br>
+  </form>
+

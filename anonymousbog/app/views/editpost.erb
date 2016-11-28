@@ -1,0 +1,23 @@
+<form action="/posts/edit/<%= @editpost.id %>" method="post" id="form1" align="center">
+    <div class = "page-header">  
+      <div class="col-md-6">
+         <h2>
+           New Title: 
+         </h2> 
+         <input type="text" name="newtitle" value="<%= @editpost.title %>"><br><br> 
+      </div>
+
+      <div class="col-md-6"> 
+        <h2>
+        New Body: 
+        </h2>
+        <textarea name="newbody" ><%= @editpost.body %></textarea><br><br>
+      </div>  
+    </div>   
+  <div align="center" id="divbotones">
+    <button type="reset" value="Reset" class="btn btn-danger">Reset</button>
+    <button type="submit" class="btn btn-success">Edit Post</button>
+    <a href="/"><button class="btn btn-primary">Home Page</button></a>
+  </div>
+</form>
+ 
