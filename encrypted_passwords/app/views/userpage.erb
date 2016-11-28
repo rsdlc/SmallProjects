@@ -1,0 +1,17 @@
+<h1>hola <%= @user.name  %></h1>
+
+<form>
+<button formaction="/logout" formmethod="post">Log out</button>
+</form>
+
+<form id="updateform">
+  New Email:<br>
+  <input type="email" name="newemail" required><br>
+  New Password:<br>
+  <input type="password" name="newpassword" required>
+<button formaction="/user/update" formmethod="post">edit profile</button>
+</form>
+
+<form onsubmit="return confirm('Are you sure you want to delete your account?')" id="deleteform">
+<button formaction="/user/delete" formmethod="post">delete account</button>
+</form>
