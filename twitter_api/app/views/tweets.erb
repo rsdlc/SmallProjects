@@ -1,0 +1,8 @@
+<% if @tweets && @user %>
+<h1><%= @user.name %></h1>
+  <% @tweets.each do |tweet| %>
+  <p><%= tweet.body %></p>
+  <% end %>
+<% else %>  
+<h1>Ya no funcionó</h1>
+<% end %>
