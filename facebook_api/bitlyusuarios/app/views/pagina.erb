@@ -1,0 +1,8 @@
+ <h1>Welcome to your page!</h1>
+<% if @todo != nil then %>
+  <h2>Current links:</h2>
+    <% @todo.each do |url, clickcount| %>
+    <p><%= p url %></p>
+    <p><%= p clickcount %></p>
+    <% end %>
+  <% end %>

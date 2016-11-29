@@ -1,0 +1,16 @@
+<% if @user && @facebook %>
+  <div class="jumbotron">
+    <h1>Welcome <%=@user.name  %>!</h1>
+    <a href="/logout"><button id="btn_logout">LogOut</button></a>
+  </div>
+  <div class="body">
+  <h3>Timeline:</h3><br>
+  <% @facebook.get_connection('me','posts',{fields: ['message','story','picture']}).each do |x| %>
+  <p><img src="<%= @facebook.get_picture('me') %>" alt="No img found"><%= x["story"]%>
+  <p><%= x["message"] %></p>
+  <img src="<%= x["picture"] %>" alt="">
+    <% end %>
+  </div>
+<% else %>
+<h1>Something is wrong</h1>
+<% end %>
